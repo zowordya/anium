@@ -1,0 +1,192 @@
+:root {
+    --primary-bg: #1e1e2f;
+    --secondary-bg: #2a2a40;
+    --accent-color: #ff4c68;
+    --text-light: #f0f0f5;
+    --text-dark: #ccc;
+    --card-shadow: rgba(0, 0, 0, 0.2);
+    --font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--primary-bg);
+    color: var(--text-light);
+    overflow-x: hidden; /* Убирает горизонтальный скролл */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-bg);
+    box-shadow: 0 4px 8px var(--card-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--text-light);
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+.search {
+    padding: 0.7rem 1rem;
+    width: 100%;
+    max-width: 300px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background: var(--primary-bg);
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+.banner {
+    height: 300px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), var(--primary-bg)), url('banner.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.banner-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+.banner-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.banner-text button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.banner-text button:hover {
+    background-color: #ff2a4f;
+}
+
+.popular {
+    padding: 2rem;
+}
+
+.popular h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+.anime-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.anime-card {
+    background-color: var(--secondary-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--card-shadow);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.anime-card:hover {
+    transform: translateY(-10px);
+}
+
+.anime-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.anime-card .info {
+    padding: 1rem;
+}
+
+.anime-card .info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+}
+
+.anime-card .info p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.anime-card .info span {
+    font-size: 0.8rem;
+    color: var(--accent-color);
+}
+
+.footer {
+    background-color: var(--secondary-bg);
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Кнопки группируются при недостатке места */
+    gap: 1rem;
+}
+
+.footer-nav a {
+    color: var(--text-dark);
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: var(--accent-color);
+}
+
+@media (max-width: 600px) {
+    .banner-text h1 {
+        font-size: 2rem;
+    }
+
+    .banner-text p {
+        font-size: 1rem;
+    }
+
+    .banner-text button {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    .search {
+        max-width: 200px;
+    }
+}
