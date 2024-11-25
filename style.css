@@ -190,3 +190,18 @@ body {
         max-width: 200px;
     }
 }
+.video-player {
+    padding: 2rem;
+    text-align: center;
+}
+
+.video-player h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--card-shadow);
+}
