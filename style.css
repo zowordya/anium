@@ -18,7 +18,7 @@ body {
     font-family: var(--font-family);
     background-color: var(--primary-bg);
     color: var(--text-light);
-    overflow-x: hidden; /* Убирает горизонтальный скролл */
+    overflow-x: hidden;
 }
 
 .header {
@@ -148,60 +148,69 @@ body {
     color: var(--accent-color);
 }
 
-.footer {
-    background-color: var(--secondary-bg);
-    padding: 1rem 2rem;
+.watch-btn {
+    display: block;
+    padding: 0.8rem 1rem;
+    background-color: var(--accent-color);
+    color: #fff;
+    border-radius: 25px;
     text-align: center;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.watch-btn:hover {
+    background-color: #ff2a4f;
+}
+
+.player-container {
+    max-width: 100%;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: var(--secondary-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--card-shadow);
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 0.8rem 1rem;
+    background-color: var(--accent-color);
+    color: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #ff2a4f;
+}
+
+.footer {
+    padding: 1rem;
+    background-color: var(--secondary-bg);
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-dark);
 }
 
 .footer-nav {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Кнопки группируются при недостатке места */
     gap: 1rem;
 }
 
 .footer-nav a {
-    color: var(--text-dark);
-    margin: 0 0.5rem;
+    color: var(--text-light);
     text-decoration: none;
+    font-size: 0.9rem;
     transition: color 0.3s;
 }
 
 .footer-nav a:hover {
     color: var(--accent-color);
-}
-
-@media (max-width: 600px) {
-    .banner-text h1 {
-        font-size: 2rem;
-    }
-
-    .banner-text p {
-        font-size: 1rem;
-    }
-
-    .banner-text button {
-        font-size: 0.9rem;
-        padding: 0.7rem 1.2rem;
-    }
-
-    .search {
-        max-width: 200px;
-    }
-}
-.video-player {
-    padding: 2rem;
-    text-align: center;
-}
-
-.video-player h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: var(--text-light);
-}
-
-iframe {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px var(--card-shadow);
 }
